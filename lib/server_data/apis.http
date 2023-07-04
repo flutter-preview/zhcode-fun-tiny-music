@@ -1,0 +1,47 @@
+@subsonicToken = 46b671ac86b7b5b06c2457bc54cb90eb
+@salt = tinymusic
+@subsonicParams = f=json&u={{username}}&v=1.16.1&c=小音乐APP&t={{subsonicToken}}&s={{salt}}
+
+###
+# 服务可用性检测
+GET {{host}}/rest/ping?{{subsonicParams}} HTTP/1.1
+
+###
+# 当前播放
+GET {{host}}/rest/getNowPlaying?{{subsonicParams}} HTTP/1.1
+
+###
+# 获取随机音乐
+GET {{host}}/rest/getRandomSongs?{{subsonicParams}}&size=2 HTTP/1.1
+
+###
+# 获取音乐详情
+GET {{host}}/rest/getSong?{{subsonicParams}}&id=9d961194020a881c3148b2328f05c152 HTTP/1.1
+
+###
+# 获取收藏的音乐
+GET {{host}}/rest/getStarred?{{subsonicParams}} HTTP/1.1
+
+###
+# 获取封面
+GET {{host}}/rest/getCoverArt?{{subsonicParams}}&id=pl-a43dcea1-f6ac-4733-becb-3a3c1096d983_64a198af HTTP/1.1
+
+###
+# 喜欢
+GET {{host}}/rest/star?{{subsonicParams}}&id=d6be7051de1697fcbd1fc2ec4d2cc1bd HTTP/1.1
+
+###
+# 取消喜欢
+GET {{host}}/rest/unstar?{{subsonicParams}}&id=d6be7051de1697fcbd1fc2ec4d2cc1bd HTTP/1.1
+
+###
+# 获取所有歌单
+GET {{host}}/rest/getPlaylists?{{subsonicParams}} HTTP/1.1
+
+###
+# 获取歌单内的歌曲
+GET {{host}}/rest/getPlaylist?{{subsonicParams}}&id= HTTP/1.1
+
+###
+# 获取专辑列表
+GET {{host}}/rest/getAlbumList?{{subsonicParams}}&type=newest&size=2 HTTP/1.1

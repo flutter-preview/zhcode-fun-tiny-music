@@ -1,0 +1,8 @@
+{
+  "rest-client.environmentVariables": {
+    "$navidrome": {
+      "host": "https://music.282800.xyz:24511",
+      "username": "zhcode",
+    }
+  }
+}
